@@ -1,94 +1,506 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Kaique Araujo</title>
+    <title>Kaique Araujo | Desenvolvedor Mobile Full Stack</title>
+    <meta name="description" content="Kaique Araujo, desenvolvedor Mobile Full Stack em São Paulo. Apps Android e iOS com React Native, Expo e TypeScript, web com React.js e back-end com PHP, Node.js e SQL Server.">
+    <meta name="theme-color" content="#0a0e13">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kaique Araujo | Desenvolvedor Mobile Full Stack">
+    <meta property="og:description" content="Apps mobile com React Native e soluções web full stack. Veja projetos, experiência e contato.">
+    <meta property="og:url" content="https://unifkaraujo.github.io/">
+    <meta property="og:image" content="https://unifkaraujo.github.io/img/perfil.jpg">
+    <meta property="og:locale" content="pt_BR">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2310b981'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='28' fill='%230a0e13'%3EKA%3C/text%3E%3C/svg%3E">
+
+    <!-- Aplica o tema salvo antes de renderizar, evitando flash -->
+    <script>
+        try {
+            var t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+        document.documentElement.classList.add('js');
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Dev Icon Fonts -->
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-          
     <!-- CSS do Projeto -->
     <link rel="stylesheet" href="css/styles.css">
-
 </head>
 <body>
-   
-    <main id="container">
 
-        <!-- Menu lateral a esquerda -->
-        <aside id="bio-container">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-            <h2> Kaique Araujo </h2>
-            <img id="bio-image" src="img/perfil.jpg" alt="Kaique Araujo">
-            <p> Olá, meu nome é Kaique Araujo e sou <span class="highlight"> Desenvolvedor </span> </p>
-            <p id="welcome-text"> Seja bem-vindo! </p>
-            <ul id="social-container">
-                <li>
-                    <a href="https://api.whatsapp.com/send?phone=5511942352102" target="_blank">
-                      <ion-icon name="logo-whatsapp"></ion-icon>
-                    </a>
-                </li>
-            </ul>
+    <!-- Navegação -->
+    <header class="nav" id="nav">
+        <div class="nav-inner container">
+            <a href="#inicio" class="nav-logo" aria-label="Início">
+                <span class="logo-mark">KA</span>
+                <span class="logo-text">Kaique Araujo</span>
+            </a>
 
-            <div id="email-container">
-                <ion-icon name="mail-outline"></ion-icon><a href="mailto:kaique.earaujo@outlook.com">kaique.earaujo@outlook.com</a>
+            <nav class="nav-links" id="nav-links" aria-label="Principal">
+                <a href="#sobre">Sobre</a>
+                <a href="#experiencia">Experiência</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#skills">Skills</a>
+                <a href="#formacao">Formação</a>
+                <a href="#contato" class="nav-cta">Contato</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn" id="theme-toggle" type="button" aria-label="Alternar tema claro/escuro">
+                    <ion-icon name="sunny-outline" class="icon-sun"></ion-icon>
+                    <ion-icon name="moon-outline" class="icon-moon"></ion-icon>
+                </button>
+                <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+                    <span></span><span></span>
+                </button>
             </div>
-        
-        </aside>
+        </div>
+    </header>
 
-        <!-- Conteúdo a direta -->
-        <section id="about-container">
-            <h1 id="name"> Kaique Araujo </h1>
-            <p id="title"> <span class="highlight"> Programador </span> </p>
-            <p class="description"> Sou desenvolvedor FullStack de sistemas ERP, com ênfase em indústrias e comércios. Atuo desde a etapa de levantamento de requisitos até o deploy e entrega final ao cliente. </p>
-            <p class="description"> Atuo também com projetos Mobile, criando recursos integrados ao sistema e realizando desenvolvimentos independentes. </p>
-            <a href="https://github.com/unifkaraujo" id="btn-projects" target="_blank"> <ion-icon name="share-social-outline">  </ion-icon> Ver Projetos </a>
-            <h2 id="skills-section-title"> Minhas Skills </h2>
-            <p class="description"> Conheça as tecnologias que domino: </p>
-            <div id="skills-container">
-                <div class="skills-box">
-                    <p class="skills-title">Front-end</p>
-                    <i class="devicon-javascript-plain colored"></i>
-                    <i class="devicon-typescript-plain colored"></i>
-                    <i class="devicon-html5-plain-wordmark colored"></i>
-                    <i class="devicon-css3-plain-wordmark colored"></i>
+    <main id="conteudo">
+
+        <!-- Hero -->
+        <section class="hero" id="inicio">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <p class="status reveal"><span class="status-dot"></span> Aberto a novas oportunidades</p>
+                    <h1 class="reveal">Olá, eu sou o<br><span class="gradient-text">Kaique Araujo</span></h1>
+                    <p class="hero-role reveal">Desenvolvedor Mobile Full Stack</p>
+                    <p class="hero-lead reveal">
+                        Crio apps Android e iOS com <strong>React Native</strong> e soluções web com <strong>React.js</strong>,
+                        do banco de dados até a publicação na loja, com foco em performance, arquitetura limpa e boa experiência de uso.
+                    </p>
+                    <div class="hero-actions reveal">
+                        <a href="#projetos" class="btn btn-primary">
+                            Ver projetos <ion-icon name="arrow-down-outline"></ion-icon>
+                        </a>
+                        <a href="#contato" class="btn btn-ghost">Fale comigo</a>
+                    </div>
+                    <ul class="socials reveal" aria-label="Redes">
+                        <li><a href="https://www.linkedin.com/in/kaiquearaujo-dev/" target="_blank" rel="noopener" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                        <li><a href="https://github.com/unifkaraujo" target="_blank" rel="noopener" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon></a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=5511942352102" target="_blank" rel="noopener" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                        <li><a href="mailto:kaique.earaujo@outlook.com" aria-label="E-mail"><ion-icon name="mail-outline"></ion-icon></a></li>
+                    </ul>
                 </div>
-                <div class="skills-box">
-                    <p class="skills-title">Back-end</p>
-                    <i class="devicon-php-plain"></i>
-                    <i class="devicon-nodejs-plain-wordmark colored"></i>
-                    <i class="devicon-python-plain-wordmark colored"></i>
-                    <i class="devicon-cplusplus-plain colored"></i>
-                    <i class="devicon-java-plain-wordmark"></i>
+
+                <div class="hero-photo reveal">
+                    <div class="photo-ring">
+                        <img src="img/perfil.jpg" alt="Foto de Kaique Araujo" width="460" height="460">
+                    </div>
+                    <div class="floating-chip chip-a"><ion-icon name="phone-portrait-outline"></ion-icon> React Native</div>
+                    <div class="floating-chip chip-b"><ion-icon name="server-outline"></ion-icon> PHP · SQL Server</div>
                 </div>
-                <div class="skills-box">
-                    <p class="skills-title">Databases</p>
-                    <i class="devicon-microsoftsqlserver-plain-wordmark colored"></i>
-                    <i class="devicon-firebase-plain-wordmark colored"></i>
-                    <i class="devicon-postgresql-plain-wordmark colored"></i>
-                    <i class="devicon-sqlite-plain-wordmark colored"></i>
-                    <i class="devicon-mysql-plain-wordmark colored"></i>
+            </div>
+
+            <div class="container">
+                <dl class="stats reveal">
+                    <div class="stat"><dt>Anos em tecnologia</dt><dd>8+</dd></div>
+                    <div class="stat"><dt>Anos com React Native</dt><dd>3+</dd></div>
+                    <div class="stat"><dt>Anos com sistemas ERP</dt><dd>5+</dd></div>
+                    <div class="stat"><dt>Bacharel em Ciência da Computação</dt><dd>FEI</dd></div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Sobre -->
+        <section class="section" id="sobre">
+            <div class="container about-grid">
+                <div class="section-head reveal">
+                    <span class="eyebrow">01 · Sobre</span>
+                    <h2>Do ERP ao app na mão do usuário</h2>
                 </div>
-                <div class="skills-box">
-                    <p class="skills-title">Tools</p>
-                    <i class="devicon-react-original colored"></i>
-                    <i class="devicon-androidstudio-plain"></i>
+                <div class="about-text reveal">
+                    <p>
+                        Comecei em 2018 no suporte técnico de sistemas ERP e evoluí para o desenvolvimento, construindo sistemas
+                        para indústrias e comércios com Delphi, T-SQL e Firebird. Essa base me deu atenção a regras de negócio,
+                        integridade de dados e consultas otimizadas.
+                    </p>
+                    <p>
+                        Hoje atuo como <strong>Mobile Full Stack Developer</strong>: crio apps para Android e iOS com React Native, Expo
+                        e TypeScript, interfaces web com React.js e Tailwind, e o back-end em PHP com SQL Server, além de
+                        integrações com APIs REST.
+                    </p>
+                    <p>
+                        Trabalho com arquiteturas escaláveis (Clean Architecture e Feature-Based), componentização, testes unitários
+                        e automação de build e deploy. Meu foco é entregar soluções eficientes que gerem valor real para pessoas e negócios.
+                    </p>
+                    <ul class="about-facts">
+                        <li><ion-icon name="location-outline"></ion-icon> São Paulo, Brasil</li>
+                        <li><ion-icon name="laptop-outline"></ion-icon> Remoto, híbrido ou presencial</li>
+                        <li><ion-icon name="school-outline"></ion-icon> Ciência da Computação · FEI</li>
+                    </ul>
                 </div>
-                <!-- Posso adicionar JSX em front, Firebird no database -->
+            </div>
+        </section>
+
+        <!-- Experiência -->
+        <section class="section" id="experiencia">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">02 · Experiência</span>
+                    <h2>Trajetória profissional</h2>
+                </div>
+
+                <ol class="timeline">
+                    <li class="tl-item reveal">
+                        <div class="tl-dot"></div>
+                        <div class="tl-card">
+                            <div class="tl-top">
+                                <div>
+                                    <h3>React Native Developer</h3>
+                                    <p class="tl-company">SinergyRH · Tempo integral · Remoto</p>
+                                </div>
+                                <span class="tl-date current">ago 2024 · atual</span>
+                            </div>
+                            <ul class="tl-list">
+                                <li>Desenvolvimento de apps mobile (Android e iOS) e interfaces web responsivas com React Native, Expo, React.js, TypeScript e Tailwind CSS, com foco em UX/UI e componentização.</li>
+                                <li>Back-end em PHP integrado ao SQL Server, consumo de APIs REST, gerenciamento de estado, validação de formulários e navegação.</li>
+                                <li>Clean Architecture, Feature-Based Architecture e testes unitários para manter o código organizado e desacoplado.</li>
+                                <li>Análise de requisitos, novas funcionalidades, refatoração e melhorias contínuas de performance.</li>
+                                <li>Versionamento com Git e TFS, build, publicação e automação de deploy mobile.</li>
+                            </ul>
+                            <ul class="tags">
+                                <li>React Native</li><li>Expo</li><li>React.js</li><li>TypeScript</li><li>Tailwind</li><li>PHP</li><li>SQL Server</li><li>Jest / Vitest</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="tl-item reveal">
+                        <div class="tl-dot"></div>
+                        <div class="tl-card">
+                            <div class="tl-top">
+                                <div>
+                                    <h3>Lider Informática</h3>
+                                    <p class="tl-company">Tempo integral · Remoto · 6 anos e 7 meses</p>
+                                </div>
+                                <span class="tl-date">fev 2018 · ago 2024</span>
+                            </div>
+
+                            <div class="tl-roles">
+                                <div class="tl-role">
+                                    <div class="tl-role-head">
+                                        <h4>React Native Developer <span class="level">Pleno</span></h4>
+                                        <span class="tl-role-date">jul 2023 · ago 2024</span>
+                                    </div>
+                                    <ul class="tl-list">
+                                        <li>Adaptação e desenvolvimento de módulos do ERP para dispositivos móveis com React Native, JavaScript, TypeScript e CSS-in-JS.</li>
+                                        <li>Integração com Firebird e Firebase para armazenamento e sincronização de dados, além de APIs REST com regras de negócio empresariais.</li>
+                                        <li>Funcionalidades voltadas à otimização de processos internos e produtividade operacional, em equipes ágeis (Scrum/Kanban).</li>
+                                    </ul>
+                                </div>
+                                <div class="tl-role">
+                                    <div class="tl-role-head">
+                                        <h4>Desenvolvedor de Sistemas <span class="level">Pleno</span></h4>
+                                        <span class="tl-role-date">mar 2019 · jul 2023</span>
+                                    </div>
+                                    <ul class="tl-list">
+                                        <li>Concepção e desenvolvimento de sistemas ERP robustos e escaláveis, priorizando consistência de dados e desempenho.</li>
+                                        <li>Aplicações em Delphi com back-end em Transact-SQL (T-SQL).</li>
+                                        <li>Gestão de bases Firebird: queries otimizadas, views, triggers e procedures.</li>
+                                    </ul>
+                                </div>
+                                <div class="tl-role">
+                                    <div class="tl-role-head">
+                                        <h4>Analista de Suporte Técnico</h4>
+                                        <span class="tl-role-date">fev 2018 · mar 2019</span>
+                                    </div>
+                                    <ul class="tl-list">
+                                        <li>Suporte técnico de sistemas ERP e soluções em SQL, com desenvolvimento e manutenção de procedures e triggers.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <ul class="tags">
+                                <li>React Native</li><li>TypeScript</li><li>Firebase</li><li>Firebird</li><li>Delphi</li><li>T-SQL</li><li>SQL Server</li><li>ERP</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section class="section" id="projetos">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">03 · Projetos</span>
+                    <h2>Projetos em destaque</h2>
+                    <p class="section-sub">Projetos pessoais e técnicos publicados no GitHub, do app que uso no dia a dia a desafios de código.</p>
+                </div>
+
+                <!-- Destaque: Carrinho -->
+                <article class="feature reveal">
+                    <div class="feature-media">
+                        <img src="img/carrinho-lista.png" alt="Tela da lista de compras do app Carrinho" loading="lazy" width="360" height="763">
+                        <img src="img/carrinho-voz.png" alt="Painel de captura por voz do app Carrinho" loading="lazy" width="360" height="763">
+                    </div>
+                    <div class="feature-body">
+                        <span class="feature-label">Android · Full Stack</span>
+                        <h3>Carrinho</h3>
+                        <p>
+                            Lista de compras em que adicionar um item leva um toque e uma frase. Diga <em>"2 pacotes de café"</em>
+                            pelo widget e o app entende a quantidade, junta com o que já está na lista e funciona até sem internet.
+                        </p>
+                        <ul class="feature-points">
+                            <li>Widget, atalhos do ícone e botão nas Configurações rápidas com módulo nativo em <strong>Kotlin</strong></li>
+                            <li>Interpretação de linguagem natural em pt-BR: números por extenso, unidades e plurais</li>
+                            <li><strong>Offline-first</strong> com fila de sincronização persistente e atualização otimista</li>
+                            <li>API serverless em Cloudflare Workers + D1, monorepo com CI</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>React Native</li><li>Expo</li><li>TypeScript</li><li>Kotlin</li><li>Cloudflare Workers</li><li>D1</li><li>Hono</li><li>Drizzle</li><li>TanStack Query</li>
+                        </ul>
+                        <div class="feature-links">
+                            <a href="https://github.com/unifkaraujo/carrinho" target="_blank" rel="noopener" class="btn btn-small"><ion-icon name="logo-github"></ion-icon> Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Destaque: RevisõesApp -->
+                <article class="feature feature-alt reveal">
+                    <div class="feature-media">
+                        <img src="img/revisoes-lista.png" alt="Lista de revisões do RevisõesApp" loading="lazy" width="420" height="842">
+                        <img src="img/revisoes-login.png" alt="Tela de login do RevisõesApp" loading="lazy" width="420" height="842">
+                    </div>
+                    <div class="feature-body">
+                        <span class="feature-label">Mobile · Firebase</span>
+                        <h3>RevisõesApp</h3>
+                        <p>
+                            App de revisões programadas para estudo: você registra um conteúdo, define em quantos dias quer revisá-lo
+                            e o app mantém tudo ordenado pela próxima revisão. Nasceu como ferramenta pessoal e virou um app multiusuário.
+                        </p>
+                        <ul class="feature-points">
+                            <li>Cadastro, login, sessão persistente e recuperação de senha com Firebase Auth</li>
+                            <li>Dados isolados por usuário com regras de segurança aplicadas no servidor</li>
+                            <li>Arquitetura em camadas com hooks e domínio tipado em TypeScript</li>
+                            <li>Busca instantânea com filtro memoizado e mensagens de erro em português</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>React Native</li><li>TypeScript</li><li>Firebase Auth</li><li>Realtime Database</li><li>Axios</li><li>ESLint + Prettier</li>
+                        </ul>
+                        <div class="feature-links">
+                            <a href="https://github.com/unifkaraujo/App-Revisoes" target="_blank" rel="noopener" class="btn btn-small"><ion-icon name="logo-github"></ion-icon> Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <h3 class="subhead reveal">Outros projetos</h3>
+                <div class="cards">
+                    <article class="card reveal">
+                        <div class="card-top">
+                            <ion-icon name="stats-chart-outline" class="card-icon"></ion-icon>
+                            <div class="card-links">
+                                <a href="https://test-web-leve-saude-dun.vercel.app/" target="_blank" rel="noopener" aria-label="Ver demo do Leve Saúde Web"><ion-icon name="open-outline"></ion-icon></a>
+                                <a href="https://github.com/unifkaraujo/test-web-leve-saude" target="_blank" rel="noopener" aria-label="Código do Leve Saúde Web"><ion-icon name="logo-github"></ion-icon></a>
+                            </div>
+                        </div>
+                        <h4>Leve Saúde · Web</h4>
+                        <p>Dashboard para administrar feedbacks, com autenticação, filtros por data e nota e busca. Publicado na Vercel.</p>
+                        <ul class="tags tags-sm"><li>React</li><li>Vite</li><li>Tailwind</li><li>Firebase</li></ul>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card-top">
+                            <ion-icon name="chatbubbles-outline" class="card-icon"></ion-icon>
+                            <div class="card-links">
+                                <a href="https://github.com/unifkaraujo/test-mobile-leve-saude" target="_blank" rel="noopener" aria-label="Código do Leve Saúde Mobile"><ion-icon name="logo-github"></ion-icon></a>
+                            </div>
+                        </div>
+                        <h4>Leve Saúde · Mobile</h4>
+                        <p>App para envio e consulta de feedbacks com nota e comentário, persistência no Firestore e build com EAS.</p>
+                        <ul class="tags tags-sm"><li>React Native</li><li>Expo</li><li>TypeScript</li><li>Firestore</li></ul>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card-top">
+                            <ion-icon name="checkbox-outline" class="card-icon"></ion-icon>
+                            <div class="card-links">
+                                <a href="https://github.com/unifkaraujo/App-PlanTasks" target="_blank" rel="noopener" aria-label="Código do PlanTasks"><ion-icon name="logo-github"></ion-icon></a>
+                            </div>
+                        </div>
+                        <h4>PlanTasks</h4>
+                        <p>Controle de tarefas pessoais com planejamento por data, navegação em drawer e armazenamento local com SQLite.</p>
+                        <ul class="tags tags-sm"><li>React Native</li><li>SQLite</li><li>React Navigation</li></ul>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card-top">
+                            <ion-icon name="fast-food-outline" class="card-icon"></ion-icon>
+                            <div class="card-links">
+                                <a href="https://github.com/unifkaraujo/ifood-clone" target="_blank" rel="noopener" aria-label="Código do iFood Clone"><ion-icon name="logo-github"></ion-icon></a>
+                            </div>
+                        </div>
+                        <h4>iFood Clone</h4>
+                        <p>Recriação da interface do iFood com tema customizado, estilizada com Tailwind via NativeWind e animações com Reanimated.</p>
+                        <ul class="tags tags-sm"><li>React Native</li><li>Expo</li><li>NativeWind</li><li>Reanimated</li></ul>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card-top">
+                            <ion-icon name="people-outline" class="card-icon"></ion-icon>
+                            <div class="card-links">
+                                <a href="https://github.com/unifkaraujo/Desafio-Usuarios" target="_blank" rel="noopener" aria-label="Código do Desafio Usuários"><ion-icon name="logo-github"></ion-icon></a>
+                            </div>
+                        </div>
+                        <h4>Desafio Usuários</h4>
+                        <p>Lista de usuários consumindo a API JSONPlaceholder, com estado e chamadas assíncronas em Redux + Redux-Saga.</p>
+                        <ul class="tags tags-sm"><li>React</li><li>TypeScript</li><li>Redux-Saga</li><li>Styled Components</li></ul>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card-top">
+                            <ion-icon name="flame-outline" class="card-icon"></ion-icon>
+                            <div class="card-links">
+                                <a href="https://github.com/unifkaraujo/Desafio-Dragons" target="_blank" rel="noopener" aria-label="Código do Desafio Dragons"><ion-icon name="logo-github"></ion-icon></a>
+                            </div>
+                        </div>
+                        <h4>Desafio Dragons</h4>
+                        <p>Listagem de dragões com CRUD completo consumindo uma API REST, com navegação via React Router.</p>
+                        <ul class="tags tags-sm"><li>React</li><li>TypeScript</li><li>Axios</li><li>React Router</li></ul>
+                    </article>
+                </div>
+
+                <div class="more reveal">
+                    <a href="https://github.com/unifkaraujo?tab=repositories" target="_blank" rel="noopener" class="btn btn-ghost">
+                        <ion-icon name="logo-github"></ion-icon> Ver todos no GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">04 · Skills</span>
+                    <h2>Tecnologias com que trabalho</h2>
+                </div>
+
+                <div class="skills">
+                    <div class="skill-group reveal">
+                        <div class="skill-head"><ion-icon name="phone-portrait-outline"></ion-icon><h3>Mobile</h3></div>
+                        <ul class="tags"><li>React Native</li><li>Expo</li><li>EAS Build</li><li>Android</li><li>Kotlin (módulos nativos)</li><li>Firebase</li></ul>
+                    </div>
+                    <div class="skill-group reveal">
+                        <div class="skill-head"><ion-icon name="browsers-outline"></ion-icon><h3>Front-end</h3></div>
+                        <ul class="tags"><li>React.js</li><li>TypeScript</li><li>JavaScript</li><li>Tailwind CSS</li><li>Redux-Saga</li><li>TanStack Query</li><li>HTML &amp; CSS</li></ul>
+                    </div>
+                    <div class="skill-group reveal">
+                        <div class="skill-head"><ion-icon name="git-network-outline"></ion-icon><h3>Back-end</h3></div>
+                        <ul class="tags"><li>PHP</li><li>Node.js</li><li>APIs REST</li><li>Cloudflare Workers</li><li>Hono</li><li>Delphi</li></ul>
+                    </div>
+                    <div class="skill-group reveal">
+                        <div class="skill-head"><ion-icon name="server-outline"></ion-icon><h3>Banco de dados</h3></div>
+                        <ul class="tags"><li>SQL Server / T-SQL</li><li>Firebird</li><li>PostgreSQL</li><li>SQLite / D1</li><li>Firestore</li><li>Realtime Database</li><li>Drizzle ORM</li></ul>
+                    </div>
+                    <div class="skill-group reveal">
+                        <div class="skill-head"><ion-icon name="shield-checkmark-outline"></ion-icon><h3>Qualidade &amp; testes</h3></div>
+                        <ul class="tags"><li>Jest</li><li>Vitest</li><li>Cypress</li><li>ESLint</li><li>Prettier</li></ul>
+                    </div>
+                    <div class="skill-group reveal">
+                        <div class="skill-head"><ion-icon name="construct-outline"></ion-icon><h3>Arquitetura &amp; processos</h3></div>
+                        <ul class="tags"><li>Clean Architecture</li><li>Feature-Based</li><li>Git / GitHub</li><li>TFS</li><li>CI / CD</li><li>Scrum / Kanban</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formação -->
+        <section class="section" id="formacao">
+            <div class="container edu-grid">
+                <div>
+                    <div class="section-head reveal">
+                        <span class="eyebrow">05 · Formação</span>
+                        <h2>Formação acadêmica</h2>
+                    </div>
+                    <div class="edu-card reveal">
+                        <ion-icon name="school-outline" class="edu-icon"></ion-icon>
+                        <div>
+                            <h3>Bacharelado em Ciência da Computação</h3>
+                            <p class="muted">Centro Universitário FEI · 2019 – 2022</p>
+                            <p>Estruturas de dados, algoritmos, engenharia de software, banco de dados e programação.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="section-head reveal">
+                        <span class="eyebrow">Certificações</span>
+                        <h2>Cursos e certificados</h2>
+                    </div>
+                    <ul class="certs">
+                        <li class="reveal">
+                            <a href="https://www.udemy.com/certificate/UC-819ecb6e-25a4-4eee-95c1-431b02046b03/" target="_blank" rel="noopener">
+                                <span><strong>Testes no React do Zero ao Avançado: Vitest, Cypress</strong><small>Udemy · jul 2025</small></span>
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="reveal">
+                            <a href="https://www.udemy.com/certificate/UC-ceea0302-4ff9-41f4-a9b9-bc2510465703/" target="_blank" rel="noopener">
+                                <span><strong>Git e GitHub (com Gist e GitHub Pages)</strong><small>Udemy · abr 2024</small></span>
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="reveal">
+                            <a href="https://www.udemy.com/certificate/UC-93bb3611-0e31-4512-9aeb-26b404d2f44b/" target="_blank" rel="noopener">
+                                <span><strong>React Native</strong><small>Udemy · mar 2024</small></span>
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="reveal">
+                            <a href="https://www.udemy.com/certificate/UC-faa0a7e6-2f63-42b4-9ad4-f6da87dc0f9b/" target="_blank" rel="noopener">
+                                <span><strong>Banco de Dados e SQL</strong><small>Udemy · jan 2022</small></span>
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section class="section" id="contato">
+            <div class="container">
+                <div class="contact reveal">
+                    <span class="eyebrow">06 · Contato</span>
+                    <h2>Vamos construir algo juntos?</h2>
+                    <p>Estou aberto a novas oportunidades como desenvolvedor mobile ou full stack, no modelo remoto, híbrido ou presencial. Me chame por qualquer canal abaixo.</p>
+                    <div class="contact-actions">
+                        <a href="mailto:kaique.earaujo@outlook.com" class="btn btn-primary"><ion-icon name="mail-outline"></ion-icon> kaique.earaujo@outlook.com</a>
+                        <button type="button" class="btn btn-ghost" id="copy-email" data-email="kaique.earaujo@outlook.com"><ion-icon name="copy-outline"></ion-icon> <span>Copiar e-mail</span></button>
+                    </div>
+                    <ul class="contact-links">
+                        <li><a href="https://www.linkedin.com/in/kaiquearaujo-dev/" target="_blank" rel="noopener"><ion-icon name="logo-linkedin"></ion-icon> LinkedIn</a></li>
+                        <li><a href="https://github.com/unifkaraujo" target="_blank" rel="noopener"><ion-icon name="logo-github"></ion-icon> GitHub</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=5511942352102" target="_blank" rel="noopener"><ion-icon name="logo-whatsapp"></ion-icon> WhatsApp</a></li>
+                    </ul>
+                </div>
             </div>
         </section>
 
     </main>
 
-   <!-- Ion Icons -->
-   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-   
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© <span id="year">2026</span> Kaique Araujo</p>
+            <a href="#inicio" class="to-top">Voltar ao topo <ion-icon name="arrow-up-outline"></ion-icon></a>
+        </div>
+    </footer>
+
+    <!-- Ion Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- JS do Projeto -->
+    <script src="js/main.js"></script>
 </body>
 </html>
