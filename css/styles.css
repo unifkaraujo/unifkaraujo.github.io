@@ -268,11 +268,6 @@ ion-icon {
     border-color: var(--accent);
 }
 
-.tags-sm li {
-    font-size: 11.5px;
-    padding: 3px 9px;
-}
-
 /* ==========================================================
    Navegação
    ========================================================== */
@@ -458,34 +453,6 @@ ion-icon {
     grid-template-columns: 1.25fr 1fr;
     align-items: center;
     gap: 48px;
-}
-
-.status {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 6px 14px 6px 12px;
-    margin-bottom: 24px;
-    border-radius: 999px;
-    border: 1px solid var(--border-strong);
-    background: var(--surface);
-    font-size: 13.5px;
-    color: var(--text-muted);
-}
-
-.status-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 0 0 var(--accent);
-    animation: pulse 2.2s infinite;
-}
-
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 60%, transparent); }
-    70% { box-shadow: 0 0 0 9px transparent; }
-    100% { box-shadow: 0 0 0 0 transparent; }
 }
 
 .hero h1 {
@@ -967,81 +934,6 @@ ion-icon {
     gap: 10px;
 }
 
-.subhead {
-    font-size: 22px;
-    margin: 64px 0 24px;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    background: var(--surface);
-    transition: transform .35s var(--ease), border-color .3s ease, box-shadow .3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    border-color: color-mix(in srgb, var(--accent) 45%, transparent);
-    box-shadow: var(--shadow);
-}
-
-.card-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 18px;
-}
-
-.card-icon {
-    font-size: 26px;
-    padding: 10px;
-    border-radius: 12px;
-    color: var(--accent);
-    background: var(--accent-soft);
-}
-
-.card-links {
-    display: flex;
-    gap: 4px;
-}
-
-.card-links a {
-    display: grid;
-    place-items: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    font-size: 19px;
-    color: var(--text-muted);
-    transition: color .2s ease, background-color .2s ease;
-}
-
-.card-links a:hover {
-    color: var(--accent);
-    background: var(--surface-2);
-}
-
-.card h4 {
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-.card p {
-    font-size: 14.5px;
-    color: var(--text-muted);
-    margin-bottom: 18px;
-    flex-grow: 1;
-}
-
 .more {
     display: flex;
     justify-content: center;
@@ -1088,12 +980,6 @@ ion-icon {
 /* ==========================================================
    Formação
    ========================================================== */
-.edu-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-}
-
 .edu-card {
     display: flex;
     gap: 18px;
@@ -1125,53 +1011,6 @@ ion-icon {
 .edu-card p:last-child {
     font-size: 15px;
     color: var(--text-muted);
-}
-
-.certs {
-    display: grid;
-    gap: 12px;
-}
-
-.certs a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 16px 20px;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
-    background: var(--surface);
-    transition: border-color .25s ease, transform .3s var(--ease);
-}
-
-.certs a:hover {
-    border-color: color-mix(in srgb, var(--accent) 45%, transparent);
-    transform: translateX(4px);
-}
-
-.certs span {
-    display: flex;
-    flex-direction: column;
-}
-
-.certs strong {
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.certs small {
-    font-size: 13px;
-    color: var(--text-muted);
-}
-
-.certs ion-icon {
-    color: var(--text-faint);
-    font-size: 18px;
-    transition: color .2s ease;
-}
-
-.certs a:hover ion-icon {
-    color: var(--accent);
 }
 
 /* ==========================================================
@@ -1324,14 +1163,9 @@ ion-icon {
         border-top: 1px solid var(--border);
     }
 
-    .about-grid,
-    .edu-grid {
+    .about-grid {
         grid-template-columns: 1fr;
         gap: 8px;
-    }
-
-    .edu-grid {
-        gap: 64px;
     }
 
     .feature {
@@ -1344,7 +1178,6 @@ ion-icon {
         order: 0;
     }
 
-    .cards,
     .skills {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1488,7 +1321,6 @@ ion-icon {
         border-width: 4px;
     }
 
-    .cards,
     .skills {
         grid-template-columns: 1fr;
     }

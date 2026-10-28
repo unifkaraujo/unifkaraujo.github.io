@@ -73,7 +73,6 @@
         <section class="hero" id="inicio">
             <div class="container hero-grid">
                 <div class="hero-text">
-                    <p class="status reveal"><span class="status-dot"></span> Aberto a novas oportunidades</p>
                     <h1 class="reveal">Olá, eu sou o<br><span class="gradient-text">Kaique Araujo</span></h1>
                     <p class="hero-role reveal">Desenvolvedor Mobile Full Stack</p>
                     <p class="hero-lead reveal">
@@ -234,8 +233,8 @@
             <div class="container">
                 <div class="section-head reveal">
                     <span class="eyebrow">03 · Projetos</span>
-                    <h2>Projetos em destaque</h2>
-                    <p class="section-sub">Projetos pessoais e técnicos publicados no GitHub, do app que uso no dia a dia a desafios de código.</p>
+                    <h2>Projetos pessoais</h2>
+                    <p class="section-sub">Apps que criei por conta própria e uso no dia a dia, com o código aberto no GitHub.</p>
                 </div>
 
                 <!-- Destaque: Carrinho -->
@@ -266,109 +265,33 @@
                     </div>
                 </article>
 
-                <!-- Destaque: RevisõesApp -->
+                <!-- Destaque: Relembra -->
                 <article class="feature feature-alt reveal">
                     <div class="feature-media">
-                        <img src="img/revisoes-lista.png" alt="Lista de revisões do RevisõesApp" loading="lazy" width="420" height="842">
-                        <img src="img/revisoes-login.png" alt="Tela de login do RevisõesApp" loading="lazy" width="420" height="842">
+                        <img src="img/relembra-lista.png" alt="Lista de revisões do Relembra com cards coloridos por categoria" loading="lazy" width="420" height="842">
+                        <img src="img/relembra-edicao.png" alt="Tela de edição de revisão do Relembra" loading="lazy" width="420" height="842">
                     </div>
                     <div class="feature-body">
                         <span class="feature-label">Mobile · Firebase</span>
-                        <h3>RevisõesApp</h3>
+                        <h3>Relembra</h3>
                         <p>
-                            App de revisões programadas para estudo: você registra um conteúdo, define em quantos dias quer revisá-lo
-                            e o app mantém tudo ordenado pela próxima revisão. Nasceu como ferramenta pessoal e virou um app multiusuário.
+                            App de revisões programadas para estudo: você registra um conteúdo, escolhe a categoria, define em quantos dias
+                            quer revisá-lo e o app mantém tudo ordenado pela próxima revisão. Nasceu como ferramenta pessoal e virou um app multiusuário.
                         </p>
                         <ul class="feature-points">
                             <li>Cadastro, login, sessão persistente e recuperação de senha com Firebase Auth</li>
+                            <li>Categorias com cor gerada automaticamente, sempre legível (contraste <strong>WCAG AA</strong>), e filtro por categoria</li>
                             <li>Dados isolados por usuário com regras de segurança aplicadas no servidor</li>
-                            <li>Arquitetura em camadas com hooks e domínio tipado em TypeScript</li>
-                            <li>Busca instantânea com filtro memoizado e mensagens de erro em português</li>
+                            <li>Arquitetura em camadas com hooks como containers e domínio tipado em TypeScript</li>
                         </ul>
                         <ul class="tags">
-                            <li>React Native</li><li>TypeScript</li><li>Firebase Auth</li><li>Realtime Database</li><li>Axios</li><li>ESLint + Prettier</li>
+                            <li>React Native</li><li>TypeScript</li><li>Firebase Auth</li><li>Realtime Database</li><li>Axios</li><li>date-fns</li><li>ESLint + Prettier</li>
                         </ul>
                         <div class="feature-links">
-                            <a href="https://github.com/unifkaraujo/App-Revisoes" target="_blank" rel="noopener" class="btn btn-small"><ion-icon name="logo-github"></ion-icon> Código</a>
+                            <a href="https://github.com/unifkaraujo/relembra" target="_blank" rel="noopener" class="btn btn-small"><ion-icon name="logo-github"></ion-icon> Código</a>
                         </div>
                     </div>
                 </article>
-
-                <h3 class="subhead reveal">Outros projetos</h3>
-                <div class="cards">
-                    <article class="card reveal">
-                        <div class="card-top">
-                            <ion-icon name="stats-chart-outline" class="card-icon"></ion-icon>
-                            <div class="card-links">
-                                <a href="https://test-web-leve-saude-dun.vercel.app/" target="_blank" rel="noopener" aria-label="Ver demo do Leve Saúde Web"><ion-icon name="open-outline"></ion-icon></a>
-                                <a href="https://github.com/unifkaraujo/test-web-leve-saude" target="_blank" rel="noopener" aria-label="Código do Leve Saúde Web"><ion-icon name="logo-github"></ion-icon></a>
-                            </div>
-                        </div>
-                        <h4>Leve Saúde · Web</h4>
-                        <p>Dashboard para administrar feedbacks, com autenticação, filtros por data e nota e busca. Publicado na Vercel.</p>
-                        <ul class="tags tags-sm"><li>React</li><li>Vite</li><li>Tailwind</li><li>Firebase</li></ul>
-                    </article>
-
-                    <article class="card reveal">
-                        <div class="card-top">
-                            <ion-icon name="chatbubbles-outline" class="card-icon"></ion-icon>
-                            <div class="card-links">
-                                <a href="https://github.com/unifkaraujo/test-mobile-leve-saude" target="_blank" rel="noopener" aria-label="Código do Leve Saúde Mobile"><ion-icon name="logo-github"></ion-icon></a>
-                            </div>
-                        </div>
-                        <h4>Leve Saúde · Mobile</h4>
-                        <p>App para envio e consulta de feedbacks com nota e comentário, persistência no Firestore e build com EAS.</p>
-                        <ul class="tags tags-sm"><li>React Native</li><li>Expo</li><li>TypeScript</li><li>Firestore</li></ul>
-                    </article>
-
-                    <article class="card reveal">
-                        <div class="card-top">
-                            <ion-icon name="checkbox-outline" class="card-icon"></ion-icon>
-                            <div class="card-links">
-                                <a href="https://github.com/unifkaraujo/App-PlanTasks" target="_blank" rel="noopener" aria-label="Código do PlanTasks"><ion-icon name="logo-github"></ion-icon></a>
-                            </div>
-                        </div>
-                        <h4>PlanTasks</h4>
-                        <p>Controle de tarefas pessoais com planejamento por data, navegação em drawer e armazenamento local com SQLite.</p>
-                        <ul class="tags tags-sm"><li>React Native</li><li>SQLite</li><li>React Navigation</li></ul>
-                    </article>
-
-                    <article class="card reveal">
-                        <div class="card-top">
-                            <ion-icon name="fast-food-outline" class="card-icon"></ion-icon>
-                            <div class="card-links">
-                                <a href="https://github.com/unifkaraujo/ifood-clone" target="_blank" rel="noopener" aria-label="Código do iFood Clone"><ion-icon name="logo-github"></ion-icon></a>
-                            </div>
-                        </div>
-                        <h4>iFood Clone</h4>
-                        <p>Recriação da interface do iFood com tema customizado, estilizada com Tailwind via NativeWind e animações com Reanimated.</p>
-                        <ul class="tags tags-sm"><li>React Native</li><li>Expo</li><li>NativeWind</li><li>Reanimated</li></ul>
-                    </article>
-
-                    <article class="card reveal">
-                        <div class="card-top">
-                            <ion-icon name="people-outline" class="card-icon"></ion-icon>
-                            <div class="card-links">
-                                <a href="https://github.com/unifkaraujo/Desafio-Usuarios" target="_blank" rel="noopener" aria-label="Código do Desafio Usuários"><ion-icon name="logo-github"></ion-icon></a>
-                            </div>
-                        </div>
-                        <h4>Desafio Usuários</h4>
-                        <p>Lista de usuários consumindo a API JSONPlaceholder, com estado e chamadas assíncronas em Redux + Redux-Saga.</p>
-                        <ul class="tags tags-sm"><li>React</li><li>TypeScript</li><li>Redux-Saga</li><li>Styled Components</li></ul>
-                    </article>
-
-                    <article class="card reveal">
-                        <div class="card-top">
-                            <ion-icon name="flame-outline" class="card-icon"></ion-icon>
-                            <div class="card-links">
-                                <a href="https://github.com/unifkaraujo/Desafio-Dragons" target="_blank" rel="noopener" aria-label="Código do Desafio Dragons"><ion-icon name="logo-github"></ion-icon></a>
-                            </div>
-                        </div>
-                        <h4>Desafio Dragons</h4>
-                        <p>Listagem de dragões com CRUD completo consumindo uma API REST, com navegação via React Router.</p>
-                        <ul class="tags tags-sm"><li>React</li><li>TypeScript</li><li>Axios</li><li>React Router</li></ul>
-                    </article>
-                </div>
 
                 <div class="more reveal">
                     <a href="https://github.com/unifkaraujo?tab=repositories" target="_blank" rel="noopener" class="btn btn-ghost">
@@ -389,7 +312,7 @@
                 <div class="skills">
                     <div class="skill-group reveal">
                         <div class="skill-head"><ion-icon name="phone-portrait-outline"></ion-icon><h3>Mobile</h3></div>
-                        <ul class="tags"><li>React Native</li><li>Expo</li><li>EAS Build</li><li>Android</li><li>Kotlin (módulos nativos)</li><li>Firebase</li></ul>
+                        <ul class="tags"><li>React Native</li><li>Expo</li><li>EAS Build</li><li>Android</li><li>Kotlin (módulos nativos)</li></ul>
                     </div>
                     <div class="skill-group reveal">
                         <div class="skill-head"><ion-icon name="browsers-outline"></ion-icon><h3>Front-end</h3></div>
@@ -397,7 +320,7 @@
                     </div>
                     <div class="skill-group reveal">
                         <div class="skill-head"><ion-icon name="git-network-outline"></ion-icon><h3>Back-end</h3></div>
-                        <ul class="tags"><li>PHP</li><li>Node.js</li><li>APIs REST</li><li>Cloudflare Workers</li><li>Hono</li><li>Delphi</li></ul>
+                        <ul class="tags"><li>PHP</li><li>Node.js</li><li>APIs REST</li><li>Firebase</li><li>Cloudflare Workers</li><li>Hono</li><li>Delphi</li></ul>
                     </div>
                     <div class="skill-group reveal">
                         <div class="skill-head"><ion-icon name="server-outline"></ion-icon><h3>Banco de dados</h3></div>
@@ -417,52 +340,18 @@
 
         <!-- Formação -->
         <section class="section" id="formacao">
-            <div class="container edu-grid">
-                <div>
-                    <div class="section-head reveal">
-                        <span class="eyebrow">05 · Formação</span>
-                        <h2>Formação acadêmica</h2>
-                    </div>
-                    <div class="edu-card reveal">
-                        <ion-icon name="school-outline" class="edu-icon"></ion-icon>
-                        <div>
-                            <h3>Bacharelado em Ciência da Computação</h3>
-                            <p class="muted">Centro Universitário FEI · 2019 – 2022</p>
-                            <p>Estruturas de dados, algoritmos, engenharia de software, banco de dados e programação.</p>
-                        </div>
-                    </div>
+            <div class="container about-grid">
+                <div class="section-head reveal">
+                    <span class="eyebrow">05 · Formação</span>
+                    <h2>Formação acadêmica</h2>
                 </div>
-                <div>
-                    <div class="section-head reveal">
-                        <span class="eyebrow">Certificações</span>
-                        <h2>Cursos e certificados</h2>
+                <div class="edu-card reveal">
+                    <ion-icon name="school-outline" class="edu-icon"></ion-icon>
+                    <div>
+                        <h3>Bacharelado em Ciência da Computação</h3>
+                        <p class="muted">Centro Universitário FEI · 2019 – 2022</p>
+                        <p>Estruturas de dados, algoritmos, engenharia de software, banco de dados e programação.</p>
                     </div>
-                    <ul class="certs">
-                        <li class="reveal">
-                            <a href="https://www.udemy.com/certificate/UC-819ecb6e-25a4-4eee-95c1-431b02046b03/" target="_blank" rel="noopener">
-                                <span><strong>Testes no React do Zero ao Avançado: Vitest, Cypress</strong><small>Udemy · jul 2025</small></span>
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
-                            </a>
-                        </li>
-                        <li class="reveal">
-                            <a href="https://www.udemy.com/certificate/UC-ceea0302-4ff9-41f4-a9b9-bc2510465703/" target="_blank" rel="noopener">
-                                <span><strong>Git e GitHub (com Gist e GitHub Pages)</strong><small>Udemy · abr 2024</small></span>
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
-                            </a>
-                        </li>
-                        <li class="reveal">
-                            <a href="https://www.udemy.com/certificate/UC-93bb3611-0e31-4512-9aeb-26b404d2f44b/" target="_blank" rel="noopener">
-                                <span><strong>React Native</strong><small>Udemy · mar 2024</small></span>
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
-                            </a>
-                        </li>
-                        <li class="reveal">
-                            <a href="https://www.udemy.com/certificate/UC-faa0a7e6-2f63-42b4-9ad4-f6da87dc0f9b/" target="_blank" rel="noopener">
-                                <span><strong>Banco de Dados e SQL</strong><small>Udemy · jan 2022</small></span>
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
-                            </a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </section>
@@ -473,7 +362,7 @@
                 <div class="contact reveal">
                     <span class="eyebrow">06 · Contato</span>
                     <h2>Vamos construir algo juntos?</h2>
-                    <p>Estou aberto a novas oportunidades como desenvolvedor mobile ou full stack, no modelo remoto, híbrido ou presencial. Me chame por qualquer canal abaixo.</p>
+                    <p>Quer conversar sobre um projeto ou trocar uma ideia? Me chame por qualquer canal abaixo.</p>
                     <div class="contact-actions">
                         <a href="mailto:kaique.earaujo@outlook.com" class="btn btn-primary"><ion-icon name="mail-outline"></ion-icon> kaique.earaujo@outlook.com</a>
                         <button type="button" class="btn btn-ghost" id="copy-email" data-email="kaique.earaujo@outlook.com"><ion-icon name="copy-outline"></ion-icon> <span>Copiar e-mail</span></button>
